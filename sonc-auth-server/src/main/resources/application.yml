@@ -1,0 +1,15 @@
+server:
+    port: 9080
+    contextPath: /auth-service
+    tomcat:
+          access_log_enabled: true
+          basedir: target/tomcat
+security:
+    basic:
+        enabled: false
+spring:
+    thymeleaf:
+        cache: false
+logging:
+ level:
+  org.springframework.security: DEBUG

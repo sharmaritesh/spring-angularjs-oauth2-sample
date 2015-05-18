@@ -1,0 +1,16 @@
+<div ng-show="authenticated">
+	
+	<h2>Greeting</h2>	
+		<p>The ID is {{greeting.id}}</p>
+		<p>The content is {{greeting.content}}</p>	
+	
+	<a href="" ng-click="fetchAdminResource()">Try accessing admin resource</a><br/>
+	<a href="" ng-click="fetchUserResource()">Try accessing user resource</a>
+	
+	<div ng-show="has403">
+		<h3>{{errorMsg}}</h3>
+	</div>
+</div>
+<div ng-show="!authenticated">
+	<p>Login to see your greeting</p>
+</div>

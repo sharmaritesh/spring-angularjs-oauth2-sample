@@ -1,0 +1,31 @@
+debug:
+server:
+  port: 7080
+  contextPath: /sonc-webapp
+security:
+  user:
+    password: none
+zuul:
+  routes:
+    resource:
+      path: /resource/**
+      url: http://localhost:8080/resource-service/
+    user:
+      path: /user/**
+      url: http://localhost:8080/resource-service/user
+spring:
+  oauth2:
+    sso:
+      home:
+        secure: false
+        path: /,/**/*.html
+    client:
+      accessTokenUri: http://localhost:9080/auth-service/oauth/token
+      userAuthorizationUri: http://localhost:9080/auth-service/oauth/authorize
+      clientId: soncui
+      clientSecret: soncui
+    resource:
+      userInfoUri: http://localhost:8080/resource-service/user
+logging:
+  level:
+    org.springframework.security: DEBUG

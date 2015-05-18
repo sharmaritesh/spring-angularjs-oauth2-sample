@@ -1,0 +1,15 @@
+server:
+ port: 8080
+ contextPath: /resource-service
+oauth2:
+ resource:
+ userInfoUri: http://localhost:9080/auth-service/user
+logging:
+ level:
+  org.springframework.security: DEBUG
+auth:
+ server:
+  url: http://localhost:9080/auth-service/oauth/check_token/
+  clientId: soncrserv
+  clientsecret: soncrserv
+  
