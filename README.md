@@ -12,4 +12,4 @@ Areas extended
 
 # How to run 
 
-On each module, execute `mvn clean exec:java` (on different console)
+On each module, execute `mvn clean install exec:java` (on different console)
