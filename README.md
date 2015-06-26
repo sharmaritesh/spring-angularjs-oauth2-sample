@@ -10,3 +10,6 @@ Areas extended
 4. JWT is not used
 
 
+# How to run 
+
+On each module, execute `mvn clean install exec:java` (on different console)
